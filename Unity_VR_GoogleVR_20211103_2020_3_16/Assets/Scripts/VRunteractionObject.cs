@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.Events;// 引用 事件 命名空間
 
 /// <summary>
 /// VR互動物件
@@ -24,7 +24,6 @@ public class VRunteractionObject : MonoBehaviour
     /// </summary>
     public void OnPointerEnter()
     {
-        print("注視點看到");
         onEnter.Invoke();
     }
 
@@ -33,8 +32,7 @@ public class VRunteractionObject : MonoBehaviour
     /// </summary>
     public void OnPointerExit()
     {
-        print("注視點離開");
-
+        onEnter.Invoke();
     }
 
     /// <summary>
@@ -42,7 +40,7 @@ public class VRunteractionObject : MonoBehaviour
     /// </summary>
     public void OnPointerClick()
     {
-        print("注視點點擊");
+        onEnter.Invoke();
     }
 
 
