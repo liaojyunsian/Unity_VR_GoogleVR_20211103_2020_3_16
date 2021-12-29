@@ -17,7 +17,7 @@ public class VRunteractionObject : MonoBehaviour
     [Header("事件：看到、離開與點擊"), Space(10)]
     public UnityEvent onEnter;
     public UnityEvent onExit;
-    public UnityEvent Click;
+    public UnityEvent onClick;
 
     /// <summary>
     /// VR注視點看到此物件 Enter
@@ -32,7 +32,7 @@ public class VRunteractionObject : MonoBehaviour
     /// </summary>
     public void OnPointerExit()
     {
-        onEnter.Invoke();
+        onExit.Invoke();
     }
 
     /// <summary>
@@ -40,13 +40,7 @@ public class VRunteractionObject : MonoBehaviour
     /// </summary>
     public void OnPointerClick()
     {
-        onEnter.Invoke();
+        onClick.Invoke();
     }
-
-
-
-
-
-
 
 }
